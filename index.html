@@ -27,6 +27,7 @@
             if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
               return (async function () {
                 const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                console.log(response)
                 if (!response.ok) {
                   throw new Error(response.statusText);
                 }
